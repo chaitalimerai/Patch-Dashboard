@@ -1,0 +1,159 @@
+/* =============Primary Navigation=============*/
+#primary-nav {
+  @include flex-properties(flex, null, null, center);
+  height: $header-height;
+  padding: 25px;
+  position: relative;
+}
+/* =============Brand Logo and=============*/
+.logo {
+  @include flex-properties(flex, null, space-between, center);
+  width: auto;
+  @media (max-width: map_get($breakpoints, "md")) {
+    width: 100%;
+  }
+  .menu-toggler {
+    color: $gray;
+    display: none;
+    @media (max-width: map_get($breakpoints, "md")) {
+      display: block;
+    }
+  }
+}
+
+#menu-toggler:checked ~ .navbar {
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+/* =============Navbar=============*/
+.navbar {
+  @include flex-properties(flex, null, space-between, null);
+  @extend %w-100;
+  
+  @media (max-width: map_get($breakpoints, "md")) {
+    @include flex-properties(flex, null, space-between, null);
+    width: 100%;
+  }
+
+  @media (max-width: map_get($breakpoints, "md")) {
+    @include flex-properties(null, column, null, null);
+    top: 50px;
+    right: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $white;
+    height: 200px;
+    padding: 10px;
+    z-index: 10;
+    transform: translateX(-1000px);
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-list {
+    @include flex-properties(flex, null, null, center);
+
+    @media (max-width: map_get($breakpoints, "md")) {
+      @include flex-properties(null, column, null, null);
+    }
+  }
+
+  .menu-list:last-child {
+    @include flex-properties(flex, row, center, null);
+  }
+
+  .menu-item {
+    @media (max-width: map_get($breakpoints, "md")) {
+      // width: 100%;
+      text-align: center;
+    }
+  }
+
+  .menu-link {
+    padding: 15px 10px;
+    font-size: $font-size * 0.9;
+    color: $gray;
+    text-decoration: none;
+    font-weight: 500;
+    &:hover,
+    &.active,
+    &:active {
+      color: $primary;
+    }
+
+    @media (max-width: map_get($breakpoints, "md")) {
+      width: 100%;
+      @include flex-properties(flex, column, null, null);
+      padding: 5px;
+    }
+  }
+
+  .nav-icon {
+    color: $gray;
+    position: relative;
+  }
+
+  .nav-icon::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    height: 6px;
+    width: 6px;
+    background-color: $danger;
+    border-radius: 50%;
+    border: 4px solid $white;
+  }
+
+  .dropdown {
+    @include flex-properties(flex, null, null, center);
+    @extend %w-100;
+    position: relative;
+
+    @media (max-width: map_get($breakpoints, "md")) {
+      width: auto;
+    }
+    .user-image {
+      height: 25px;
+      margin-right: 10px;
+    }
+    .dropdown-toggle {
+      color: $gray;
+      font-weight: normal;
+      cursor: pointer;
+    }
+  }
+
+  #dropdown-toggle:checked ~ .dropdown-menu {
+    display: block;
+  }
+
+  #dropdown-toggle:checked ~ .dropdown-toggle .fa {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    padding: 10px 10px 0 10px;
+    background-color: lighten($gray, 35%);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 120px;
+
+    .dropdown-item {
+      text-align: left;
+      color: $gray;
+      font-weight: 500;
+      display: block;
+      padding-bottom: 8px;
+      font-weight: normal;
+      &:hover,
+      &:active {
+        color: darken($gray, 20%);
+      }
+    }
+  }
+}

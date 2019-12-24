@@ -1,18 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style>
-body
-{
-Background-color:red;
-}	
-</style>
-<title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Patch Dashboard</title>
+  <!-- Font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
+
 <body>
+  <!-- Wrapper -->
+  <section id="wrapper">
+    <!-- Header -->
+    <header id="primary-nav">
+      <div class="logo">
+        <img src="assets/image/logo.png" alt="logo-image">
+        <label for="menu-toggler" class="menu-toggler">
+          <span class="fa fa-bars fa-lg"></span>
+          <label>
+      </div>
+      <input type="checkbox" name="menu-toggler" id="menu-toggler">
+      <nav class="navbar">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a href="#" class="menu-link">My Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link active">Deposits</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">Applications</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">Payments</a>
+          </li>
+        </ul>
+        <ul class="menu-list">
+          <li class="menu-item mr-1">
+            <span class="nav-icon fa fa-envelope-o fa-lg"></span>
+          </li>
+          <li class="menu-item dropdown">
+            <img src="./assets/image/user-profile.png" class="user-image" alt="User Profile">
+            <input type="checkbox" id="dropdown-toggle">
+            <label for="dropdown-toggle" class="dropdown-toggle">
+              <span class="fa fa-angle-down"></span>
+            </label>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Setting</a>
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- End: Header -->
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+    <!-- Main area -->
+    <main id="content-wrapper">
+      <!-- Content Body -->
+      <div class="content-body">
+        <div class="content-header">
+          <h2 class="content-title">Active Deposits (3)</h2>
+          <button class="btn btn-success rounded">
+            <span class="fa fa-plus"></span>
+          </button>
+        </div>
 
+        <!-- Deposit Content -->
+        <div class="row">
+          <div class="col-1">
+            <img src="./assets/image/user-profile.png" class="active-profile">
+            <div class="flex-column">
+              <h4 class="active-user">St.James Park 821b</h4>
+              <small class="active-user-detail">Furnished</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="flex-column mr-1">
+              <h4 class="active-user">18 June 2018</h4>
+              <small class="active-user-detail">Start Date</small>
+            </div>
+            <div class="flex-column mr-1">
+              <span class="fa fa-long-arrow-right fa-2x right-arrow"></span>
+            </div>
+            <div class="flex-column">
+              <h4 class="active-user">09 March 2019</h4>
+              <small class="active-user-detail">End Date</small>
+            </div>
+          </div>
+          <div class="col-3 flex-column">
+            <h4 class="active-user">$1,699 <span class="extra-rent"> +$25</span></h4>
+            <small class="active-user-detail">Monthly Rate</small>
+          </div>
+          <div class="col-4 flex-column">
+            <h4 class="active-user">$1,400</h4>
+            <small class="active-user-detail">Deposite</small>
+          </div>
+          <div class="col-5">
+            <button type="button" class="button button-danger"><span class="mr-1">Waitin on Co-Tenants </span><span
+                class="fa fa-angle-right fa-2x"></span></button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <img src="./assets/image/user-profile.png" class="active-profile">
+            <div class="flex-column">
+              <h4 class="active-user">605 Pagac Rapid</h4>
+              <small class="active-user-detail">Furnished</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="flex-column mr-1">
+              <h4 class="active-user">14 Sep 2018</h4>
+              <small class="active-user-detail">Start Date</small>
+            </div>
+            <div class="flex-column mr-1">
+              <span class="fa fa-long-arrow-right fa-2x right-arrow"></span>
+            </div>
+            <div class="flex-column">
+              <h4 class="active-user">14 Sep 2019</h4>
+              <small class="active-user-detail">End Date</small>
+            </div>
+          </div>
+          <div class="col-3 flex-column">
+            <h4 class="active-user">$2,481 <span class="extra-rent"> +$39</span></h4>
+            <small class="active-user-detail">Monthly Rate</small>
+          </div>
+          <div class="col-4 flex-column">
+            <h4 class="active-user">$4,400</h4>
+            <small class="active-user-detail">Deposit</small>
+          </div>
+          <div class="col-5">
+            <button type="button" class="button button-success">
+              <span class="mr-1">Upload Agreement</span>
+              <span class="fa fa-angle-right fa-2x"></span></button>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-1">
+            <img src="./assets/image/user-profile.png" class="active-profile">
+            <div class="flex-column">
+              <h4 class="active-user">846 Lindsay Forge</h4>
+              <small class="active-user-detail">Furnished</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="flex-column mr-1">
+              <h4 class="active-user">26 Apr 2018</h4>
+              <small class="active-user-detail">Start Date</small>
+            </div>
+            <div class="flex-column mr-1">
+              <span class="fa fa-long-arrow-right fa-2x right-arrow"></span>
+            </div>
+            <div class="flex-column">
+              <h4 class="active-user">26 Apr 2019</h4>
+              <small class="active-user-detail">End Date</small>
+            </div>
+          </div>
+          <div class="col-3 flex-column">
+            <h4 class="active-user">$899 <span class="extra-rent"> +$15</span></h4>
+            <small class="active-user-detail">Monthly Rent</small>
+          </div>
+          <div class="col-4 flex-column">
+            <h4 class="active-user">$1,400</h4>
+            <small class="active-user-detail">Deposit</small>
+          </div>
+          <div class="col-5">
+            <button type="button" class="button button-info">
+              <span class="mr-1">Upload Tenancy Docs.</span>
+              <span class="fa fa-angle-right fa-2x"></span></button>
+          </div>
+        </div>
+        <!-- End: Deposit Content -->
+
+        <div class="content-header">
+          <h3 class="content-title">Closed Deposits (1)</h3>
+        </div>
+
+        <!-- Closed Content -->
+        <div class="row">
+          <div class="col-1">
+            <img src="./assets/image/user-profile.png" class="active-profile">
+            <div class="flex-column">
+              <h4 class="active-user">846 Lindsay Forge</h4>
+              <small class="active-user-detail">Furnished</small>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="flex-column mr-1">
+              <h4 class="active-user">24 June 2017</h4>
+              <small class="active-user-detail">Start Date</small>
+            </div>
+            <div class="flex-column">
+              <div class="rounded-border">
+                <span class="fa fa-check check-arrow"></span>
+              </div>
+            </div>
+            <div class="flex-column">
+              <h4 class="active-user">09 March 2019</h4>
+              <small class="active-user-detail">End Date</small>
+            </div>
+          </div>
+          <div class="col-3 flex-column">
+            <h4 class="active-user">$1,699 <span class="extra-rent"> +$25</span></h4>
+            <small class="active-user-detail">Start Date</small>
+          </div>
+          <div class="col-4 flex-column">
+            <h4 class="active-user">$1,400</h4>
+            <small class="active-user-detail">Deposite</small>
+          </div>
+          <div class="col-5">
+            <button type="button" class="button button-light">
+              <span class="mr-1">Closed Deposit</span>
+              <span class="fa fa-angle-right fa-2x"></span></button>
+          </div>
+        </div>
+        <!-- End: Closed Content -->
+      </div>
+      <!-- End:Content Body -->
+    </main>
+    <!-- End: Main area -->
+  </section>
+  <!-- End: Wrapper -->
 </body>
+
 </html>

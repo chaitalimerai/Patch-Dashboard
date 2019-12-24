@@ -1,0 +1,149 @@
+
+//Content-Header
+.content-header {
+  @include flex-properties(flex, null, space-between, center);
+  padding: 50px 0 20px 0;
+
+  .content-title {
+    font-weight: 500;
+  }
+}
+
+//Content-Body
+.content-body {
+  .row {
+    @include flex-properties(flex, null, space-between, center);
+    padding: 25px 0;
+    border-bottom: 1px solid lighten($gray, 30%);
+    position: relative;
+    flex-wrap: wrap;
+
+    @media (max-width: map_get($breakpoints, "md")) {
+      @include flex-properties(flex, null, null, null);
+      margin-bottom: 20px;
+    }
+    
+    @media (max-width: map_get($breakpoints, "sm")) {
+      @include flex-properties(null, column, null, flex-start);
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .col-1 {
+      @include flex-properties(flex, null, null, null);
+      flex: 0 0 25%;
+      padding: 0 10px;
+      @media (max-width: map_get($breakpoints, "lg")) {
+        flex: 0 0 50%;
+        padding-bottom: 20px;
+        
+      }
+      @media (max-width: map_get($breakpoints, "sm")) {
+        flex: 0 0 100%;
+        padding-bottom: 20px;
+      }
+    }
+    .col-2 {
+      @include flex-properties(flex, null, null, center);
+      flex: 0 0 25%;
+      padding: 0 10px;
+      @media (max-width: map_get($breakpoints, "lg")) {
+        flex: 0 0 50%;
+        padding-bottom: 20px;
+      }
+      @media (max-width: map_get($breakpoints, "sm")) {
+        flex: 0 0 100%;
+        padding-bottom: 20px;
+      }
+    }
+    .col-3 {
+      @include flex-properties(flex, null, null, null);
+      flex: 0 0 15%;
+      padding: 0 10px;
+      @media (max-width: map_get($breakpoints, "lg")) {
+        flex: 0 0 25%;
+        padding-bottom: 20px;
+      }
+      @media (max-width: map_get($breakpoints, "sm")) {
+        flex: 0 0 100%;
+        padding-bottom: 20px;
+      }
+    }
+    .col-4 {
+      @include flex-properties(flex, null, null, null);
+      flex: 0 0 10%;
+      padding: 0 10px;
+      @media (max-width: map_get($breakpoints, "lg")) {
+        flex: 0 0 25%;
+        padding-bottom: 20px;
+      }
+      @media (max-width: map_get($breakpoints, "sm")) {
+        flex: 0 0 100%;
+        padding-bottom: 20px;
+      }
+    }
+    .col-5 {
+      @include flex-properties(flex, null, null, null);
+      flex: 0 0 25%;
+      padding: 0 10px;
+      @media (max-width: map_get($breakpoints, "lg")) {
+        flex: 0 0 50%;
+      }
+      @media (max-width: map_get($breakpoints, "sm")) {
+        flex: 0 0 100%;
+      }
+    }
+
+    .flex-column {
+      @include flex-properties(null, column, null, null);
+    }
+
+    .active-profile {
+      border-radius: 50%;
+      margin-right: 10px;
+      height: 55px;
+    }
+
+    .active-user {
+      color: $black;
+      font-weight: 500;
+    }
+
+    .active-user-detail {
+      color: $gray;
+      font-weight: 500;
+    }
+
+    .right-arrow {
+      color: lighten($gray, 30%);
+    }
+
+    .rounded-border {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 12px;
+      border: 2px solid lighten($gray, 20%);
+      color: lighten($success, 10%);
+      font-weight: normal;
+      margin-right: 15px;
+    }
+
+    .extra-rent {
+      color: $primary;
+      font-weight: 500;
+    }
+  }
+  .row:nth-child(2) {
+    @include border(20%, $danger);
+  }
+  .row:nth-child(3) {
+    @include border(65%, $success);
+  }
+  .row:nth-child(4) {
+    @include border(28%, $primary);
+  }
+}

@@ -1,0 +1,31 @@
+// Primary color
+$primary: #1cb5f8;
+$success: #2dca73;
+$light-success: #e1f7ea;
+$gray:  #9099a8;
+$white: #ffffff;
+$black: #000000;
+$danger: #e965cd;
+$info: #dbf3ff;
+
+$colors: (
+  "primary": $primary,
+  "success": $success,
+  "gray": $gray,
+);
+
+$buttons: (
+  "danger": lighten($danger, 30%),
+  "success": lighten($success, 45%),
+  "info": lighten($primary, 40%),
+  "light": lighten($gray, 33%),
+);
+
+$borders: (
+  "danger": $danger,
+  "success": $success,
+  "info": $info
+);
+
+// color yiq threshold
+$yiq-threshold:  150 !default;

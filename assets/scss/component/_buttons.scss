@@ -1,0 +1,66 @@
+// Button styles goes here
+.btn {
+  display: inline-block;
+  background: $gray;
+  border: 1px solid transparent;
+  padding: 10px 15px;
+}
+
+@each $color, $value in $colors {
+  .btn-#{$color} {
+    background-color: $value;
+    color: color-yiq($value);
+  }
+
+  .btn-#{$color}:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem $value;
+  }
+  .btn-#{$color}:hover {
+    background-color: darken($value, 5%);
+  }
+  .btn-#{$color}:active {
+    background-color: darken($value, 5%);
+    box-shadow: 0 0 0 0.2rem $value;
+  }
+}
+
+.rounded {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  @include flex-properties(flex, null, space-between, center);
+  border: 1px solid transparent;
+  padding: 6px 15px;
+  border-radius: 5px;
+  font-weight: 700;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/*===============Large Buttons===============*/
+
+@each $key, $value in $buttons {
+  .button-#{$key} {
+    background-color: $value;
+    color: darken($value, 40%);
+  }
+
+  .button-#{$key}:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem $value;
+  }
+  .button-#{$key}:hover {
+    background-color: darken($value, 5%);
+  }
+  .button-#{$key}:active {
+    background-color: darken($value, 5%);
+    box-shadow: 0 0 0 0.2rem $value;
+  }
+}

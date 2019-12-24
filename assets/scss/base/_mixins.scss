@@ -1,0 +1,23 @@
+// All the SCSS mixins goes here
+
+//Flex Properties Mixin
+@mixin flex-properties($flex, $flex-direction, $justify-content, $align-items) {
+  display: $flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+//Border
+@mixin border($width, $value) {
+  &::after {
+    content: "";
+    background-color: $value;
+    width: $width;
+    position: absolute;
+    height: 2px;
+    display: block;
+    bottom: -2px;
+    border-radius: 8px;
+  }
+}
